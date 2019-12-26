@@ -13,3 +13,4 @@ else :
 	print("Uhm, okay :thinking:")
 
 deinit()
+exit()
