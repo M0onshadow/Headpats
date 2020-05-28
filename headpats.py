@@ -14,7 +14,6 @@ def timeout(a,b):
 
 def randchoice():
     t = random.shuffle(["Automatic choice = headpats !!! *patpatpatpatpatpatpat* >w<", "Automatic choice = Huggyyyyyyys !!! *huggy* >w<", "Automatic choice = Nothing : go to hell."])
-    return t
     print(t)
 
 signal.signal(signal.SIGALRM, timeout)
