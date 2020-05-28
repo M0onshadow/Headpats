@@ -1,4 +1,4 @@
-from colorama import Fore, Style, deinit, init
+from colorama import Fore, Style, init
 import time
 import random
 import signal
