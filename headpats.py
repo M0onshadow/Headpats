@@ -1,4 +1,4 @@
-from colorama import Fore, Style, init
+from colorama import Fore, Style, deinit, init
 import time
 import random
 import signal
@@ -13,7 +13,7 @@ def timeout(a,b):
 
 
 def randchoice():
-    t = random.choice(["Automatic choice = headpats !!! *patpatpatpatpatpatpat* >w<", "Automatic choice = Huggyyyyyyys !!! *huggy* >w<", "Automatic choice = Nothing : go to hell."])
+    t = Fore.MAGENTA + "I've chosen for you !\r\n" + random.choice(["Headpats !!! *patpatpatpatpatpatpat* >w<", "Huggyyyyyyy !!! *hug* >w<", "Nothing : go to hell."])
     print(t)
 
 signal.signal(signal.SIGALRM, timeout)
