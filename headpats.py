@@ -13,15 +13,16 @@ def timeout(a,b):
 
 
 def randchoice():
-    t = Fore.MAGENTA + "I've chosen for you !\r\n" + random.choice(["Headpats !!! *patpatpatpatpatpatpat* >w<", "Huggyyyyyyy !!! *hug* >w<", "Nothing : go to hell."])
+    x = ["Headpats !!! *patpatpatpatpatpatpat* >w<", "Huggyyyyyyy !!! *hug* >w<", "Nothing : go to hell."]
+    t = Fore.MAGENTA + "I've chosen for you !\r\n" + random.choice(x)
     print(t)
 
 signal.signal(signal.SIGALRM, timeout)
 
-signal.alarm(5)
+signal.alarm(7)
 
 try:
-    inp = input(Fore.BLUE + Style.BRIGHT + 'Lemme patpat youuuuu -w- do u wanna some headpats ? [Y/N].\r\nCountdown before an automatic choice : 5sec.\r\n')
+    inp = input(Fore.BLUE + Style.BRIGHT + 'Lemme patpat you ! Do u wanna some headpats ? [Y/N].\r\nCountdown before an automatic choice : 7sec.\r\n')
 except TimerException:
     inp = randchoice()
 
@@ -31,7 +32,7 @@ if inp == "Y":
     print(Fore.RED + Style.BRIGHT + "Patpatpatpatpatpatpat >w<")
 elif inp == "N":
     try:
-        inp  = input(Fore.GREEN + Style.BRIGHT + "Oh... Mh, some huggys ? *^* [Y/N/Maybe]\r\n")
+        inp  = input(Fore.GREEN + Style.BRIGHT + "Oh... Mh, some huggys ? *^* [Y/N]\r\n")
     except TimerException:
         inp = "default"
     print()
@@ -39,5 +40,3 @@ elif inp == "N":
         print(Fore.RED + Style.BRIGHT + "Huggyyyyyyys !!!")
     if inp == "N":
         print(Fore.YELLOW + Style.BRIGHT + "\'kay...")
-    if inp == "Maybe":
-        print("Pfff, are you braindead ?")
